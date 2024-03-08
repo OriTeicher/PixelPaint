@@ -14,6 +14,10 @@
     z-index: 9999;
 }
 
+p {
+    margin: 0 !important;
+}
+
 .modalContent {
     padding: 10px;
     background-color: rgb(61, 61, 61);
@@ -62,13 +66,11 @@
         padding: 8px 16px;
         border: none;
         border-radius: 4px;
-        background-color: #ccc;
         color: #fff;
         cursor: pointer;
     }
 
     .closeButton:hover {
-        background-color: #999;
     }
 }
 
