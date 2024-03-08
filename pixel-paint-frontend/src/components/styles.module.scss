@@ -164,9 +164,6 @@ body {
         }
     }
     p {
-        &:hover {
-            filter: brightness(90%);
-        }
         font-size: 2em;
     }
     form {
@@ -277,6 +274,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     margin: unset;
+    background-color: #fff;
     animation: changeBgc infinite 1s 1s 100 ease-in-out;
     transition: background-color 1s;
 }
@@ -499,4 +497,10 @@ p {
 .modeError,
 .inputError {
     outline: 5px solid lightcoral;
+}
+
+@media (max-width: 768px) {
+    .dropdownMenu li {
+        font-size: 1.5em;
+    }
 }
