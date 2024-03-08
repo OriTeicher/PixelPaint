@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
 .modalOverlay {
-    font-family: 'Bruno Ace';
+    font-family: 'Madimi One', sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -72,8 +72,8 @@
     }
 }
 
-@media  (max-width: 768px) {
-    .modalContent{
+@media (max-width: 768px) {
+    .modalContent {
         width: 90vw;
     }
 }

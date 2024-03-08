@@ -9,6 +9,7 @@ import { JoinRoomPayload } from '../payloads/JoinRoomPayload'
 import { Errors } from '../utils/CommonErrors'
 import SocketManager from '../services/SocketManager'
 import { toast } from 'react-toastify'
+import { GridLoader } from 'react-spinners'
 
 interface PreGameScreenProps {
     host: string | null
@@ -140,7 +141,8 @@ function PreGameScreen({ host }: PreGameScreenProps) {
                 </h1>
                 {!canStart ? (
                     <div className={styles.waitingContainer}>
-                        <div className={styles.loadingAnimation}></div>
+                        {/* <div className={styles.loadingAnimation}></div> */}
+                        <GridLoader />
                         <h2>Waiting for player...</h2>
                     </div>
                 ) : (

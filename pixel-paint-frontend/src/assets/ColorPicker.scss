@@ -14,7 +14,7 @@
         align-items: center;
         h3 {
             font-size: 30px;
-            font-family: 'Bruno Ace';
+            font-family: 'Madimi One', sans-serif;
             color: rgb(0, 0, 0);
             font-weight: 500;
             margin: 0;
@@ -30,7 +30,6 @@
     }
     .selected {
         outline: rgb(0, 0, 0) 3px solid;
-        transform: scale(1.2);
         h3 {
             font-weight: 900;
         }

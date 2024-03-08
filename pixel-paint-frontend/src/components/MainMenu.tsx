@@ -156,6 +156,9 @@ const MainMenu: FC<MainMenuProps> = ({
                 <h1>
                     Welcome to <span>Pixel</span>Paint
                 </h1>
+                <button onClick={handleClick}>
+                    {mode !== Modes.CO_OP ? 'Start Game' : 'Create Game'}
+                </button>
                 <form>
                     <input
                         className={isNameError ? styles.inputError : ''}
@@ -168,9 +171,6 @@ const MainMenu: FC<MainMenuProps> = ({
                         onChange={handleNameChange}
                     ></input>
                 </form>
-                <button onClick={handleClick}>
-                    {mode !== Modes.CO_OP ? 'Start Game' : 'Create Game'}
-                </button>
                 <DropdownMenu
                     onSelectOption={handleChange}
                     isModeSelected={isModeError}
