@@ -85,7 +85,7 @@ function JoinGameScreen({ setGameMode, setPlayerID }: JoinGameScreenProps) {
         setModalMsg(Errors.ROOM_DISBANDED)
         setShowModal(true)
         setTimeout(() => {
-            navigate('/')
+            // navigate('/')
         }, 2000)
     }
 

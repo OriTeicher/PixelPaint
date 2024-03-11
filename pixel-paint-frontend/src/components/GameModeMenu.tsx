@@ -17,7 +17,8 @@ const DropdownMenu: FC<DropdownProps> = ({
 
     const selectedStyle = {
         color: 'white',
-        background: 'lightcoral'
+        background: 'lightcoral',
+        outline: '2.5px solid black'
     }
 
     const options = [

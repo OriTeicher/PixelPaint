@@ -19,24 +19,46 @@ body {
 }
 .topBarContainer {
     font-family: 'Madimi One', sans-serif !important;
-
-    text-shadow: 5px 5px 5px black;
     color: rgb(216, 216, 216);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     font-size: 2rem;
     font-weight: bold;
-    box-shadow: 0px 0px 5px 2px rgb(0, 0, 0);
-    margin-bottom: 10px;
-    height: 10vh;
-    h1 {
-        font-size: 1em;
-    }
-}
+    grid-row: 1;
+    height: 100%;
+    letter-spacing: 1.5px;
 
+    div {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+    box-shadow: rgb(0 0 0) 0px 2px 8px 0px;
+}
+footer {
+    grid-row: 3;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Madimi One';
+    color: white;
+    justify-content: center;
+    gap: 20px;
+    letter-spacing: 2px;
+    margin: 0;
+    :nth-child(2) {
+        color: $logoColor;
+        font-weight: 900;
+    }
+    bottom: 0;
+    left: 0;
+    box-shadow: rgb(0, 0, 0) 0px 2px 8px 0px;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+}
 .timeContainerBlink {
     width: 100%;
     margin: auto;
@@ -82,26 +104,22 @@ body {
 }
 
 .gameBtns {
-    margin: 20px 0px;
     display: flex;
     justify-content: center;
-
     button {
-        padding-top: 10px;
         position: absolute;
-        right: 0;
         top: 0;
+        right: 0;
         margin-inline-end: 5px;
-        margin-block-start: 15px;
+        font-size: 30px;
         font-family: 'Madimi One', sans-serif !important;
-        border-radius: 20px;
+        border-radius: 10px;
+        background-color: $logoColor;
         border: 3px solid black;
-        h1 {
-            font-weight: 900;
-        }
+        font-weight: 800;
         &:hover {
             cursor: pointer;
-            box-shadow: 2px 2px 2px rgb(0, 0, 0);
+            background-color: #d7d7d7;
         }
 
         &:active {
@@ -111,21 +129,20 @@ body {
 }
 
 .backBtn {
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 900;
     background-color: #e0b0b0;
     position: absolute;
     top: 0;
     left: 0;
-    margin-block-start: 20px;
     margin-inline-start: 5px;
+    margin-block-start: 5px;
     padding: 0px 10px;
     width: fit-content;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 3px solid black;
     &:hover {
         cursor: pointer;
-        box-shadow: 2px 2px 2px rgb(0, 0, 0);
         background-color: #d7d7d7;
         color: black;
     }
@@ -163,7 +180,7 @@ body {
         min-width: 200px;
         animation: ease-in-out infinite 2s floatUp;
     }
-    h1 {
+    footer {
         color: white;
         text-shadow: 3px 3px rgb(0, 0, 0);
         font-weight: 900;
@@ -203,15 +220,15 @@ body {
         letter-spacing: 1px;
         padding: 10px 20px;
         margin: auto;
-        min-width: 400px;
-
+        min-width: 300px;
+        max-width: 400px;
         font-size: 30px;
         background-color: white !important;
         border: none;
         &:hover {
             background: linear-gradient($logoColor, lightcoral);
             color: white;
-            scale: 1.05;
+            scale: 1.01;
         }
     }
     .buttonDisabled {
@@ -285,7 +302,7 @@ body {
     cursor: pointer;
     margin: unset;
     background-color: #fff;
-    animation: changeBgc infinite 1s 1s 100 ease-in-out;
+    animation: changeBgc infinite 20s 100 ease-in-out;
     transition: background-color 1s;
 }
 
@@ -310,7 +327,7 @@ body {
         scale: 1.1;
         transform: translateY(-10px);
     }
-    90% {
+    100% {
         scale: 1;
         transform: translateY(0px);
     }
@@ -341,7 +358,7 @@ p {
     border-radius: 7px;
     width: 100%;
     transition: scale 0.2s;
-
+    padding: 10px 0px;
     margin: auto;
     cursor: pointer;
     list-style: none;
@@ -375,78 +392,23 @@ p {
         }
     }
 
-    .topBarContainer {
-        height: 11vh;
-        width: 100%;
-        div {
-            font-size: 35px;
-        }
-        h1 {
-            font-size: 20px;
-        }
-    }
     .tile {
         width: 10px;
     }
 
     .backBtn {
-        font-weight: 900;
         font-size: 30px;
-        margin: 15px 5px;
-    }
-
-    .gameBtns {
-        button {
-            padding-top: 10px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            margin-inline-end: 5px;
-            margin-block-start: 15px;
-            h1 {
-                font-size: 25px;
-                font-weight: 900;
-            }
-        }
+        font-weight: 900;
     }
 }
 
 .pictureContainer {
-    margin: 10px;
     display: flex;
-    flex-direction: column-reverse;
-}
-
-.gameContainer {
-    display: grid;
+    justify-content: center;
 }
 
 @media (max-width: 1050px) {
     .loadingAnimation {
-    }
-    .gameContainer {
-        .pictureContainer {
-            margin: 0px;
-            justify-content: center;
-            margin-left: 15px;
-            margin-right: 5px;
-            margin-top: 5px;
-            gap: 44px;
-            padding: 5px;
-            flex-direction: row-reverse;
-        }
-    }
-    .topBarContainer {
-        font-family: 'Madimi One', sans-serif !important;
-        text-shadow: 5px 5px 5px black;
-        color: rgb(216, 216, 216);
-        text-align: center;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        font-size: 2em;
-        font-weight: bold;
-        box-shadow: 0px 0px 5px 2px rgb(0, 0, 0);
     }
 
     .canvasesContainer {
@@ -471,20 +433,6 @@ p {
         margin: auto;
         text-align: center;
     }
-    .gameBtns {
-        button {
-            padding-top: 10px;
-            right: 0;
-            top: 0;
-            margin: 10px 5px;
-            width: 100px;
-            height: 60px;
-            h1 {
-                font-size: 19px;
-                font-weight: 900;
-            }
-        }
-    }
 
     .mainMenuContainer {
         button,
@@ -503,14 +451,6 @@ p {
         font-size: 16px;
         cursor: pointer;
     }
-
-    .backBtn {
-        font-weight: 900;
-        width: 100px;
-        height: 60px;
-        font-size: 17px;
-        margin: 10px 5px;
-    }
 }
 
 .rowsContainer {
@@ -528,10 +468,39 @@ p {
     .dropdownMenu li {
         font-size: 1.5em;
     }
+
+    .topBarContainer {
+        font-family: 'Madimi One', sans-serif !important;
+        color: rgb(216, 216, 216);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        font-size: 2rem;
+        font-weight: bold;
+        height: 70px;
+        letter-spacing: 1.5px;
+        div {
+            display: flex;
+            gap: 0;
+            flex-direction: column;
+            font-size: 35px;
+        }
+        box-shadow: rgb(0 0 0) 0px 2px 8px 0px;
+        margin-bottom: 10px;
+    }
 }
 @media (max-width: 350px) {
     .dropdownMenu {
         display: flex;
         flex-direction: column;
     }
+}
+
+.gameBtns button,
+.backBtn {
+    margin: 10px 5px;
+    font-size: 30px;
+    padding: 0px 10px;
 }

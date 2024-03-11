@@ -1,0 +1,124 @@
+.gameContainer {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 0.5fr 1fr;
+    height: 100%;
+    width: 100vw;
+    transform: translateY(3px);
+}
+
+.game-route-container {
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(#333, transparent);
+    display: grid;
+    grid-template-rows: 70px 3fr 70px;
+    .container-fluid {
+    }
+}
+
+footer {
+}
+
+.preset-tile,
+.board-tile {
+    border-radius: 5px;
+}
+
+.preset-container {
+    transform: translateY(5px);
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    gap: 5px;
+
+    grid-template-rows: repeat(7, minmax(25px, 1fr));
+    grid-template-columns: repeat(7, minmax(50px, 1fr));
+    .preset-tile {
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+    }
+}
+
+.board-container {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(20px, 1fr));
+    justify-content: center;
+    padding: 10px;
+    width: 600px;
+    .board-tile {
+        width: 100%;
+        border-radius: 3px;
+    }
+    gap: 10px;
+}
+
+@media (max-width: 900px) {
+    .board-container {
+        justify-self: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        width: 100vw;
+        .board-tile {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .preset-container {
+        justify-self: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        .preset-tile {
+            width: 50px;
+            height: 100%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .game-route-container {
+        // grid-template-rows: auto auto auto;
+    }
+    footer {
+        background: #3333335d;
+    }
+}
+@media (max-width: 580px) {
+    .game-route-container {
+    }
+    .gameContainer {
+        grid-template-rows: 0.4fr 1fr;
+
+        justify-self: center;
+        grid-row: 2;
+        height: 100%;
+    }
+    .preset-container {
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(7, 50px);
+        height: 100%;
+        align-self: self-start;
+        gap: 0;
+        width: 100px;
+        .preset-tile {
+            border-radius: 0px;
+        }
+    }
+    .board-container {
+        margin: 0;
+        height: 0%;
+        .board-tile {
+            width: 100%;
+            height: 60px;
+            border-radius: 3px;
+        }
+    }
+}
+@media (max-width: 450px) {
+    .gameContainer {
+    }
+}

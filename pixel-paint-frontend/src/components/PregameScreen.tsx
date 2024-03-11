@@ -59,7 +59,7 @@ function PreGameScreen({ host }: PreGameScreenProps) {
                 position: toast.POSITION.BOTTOM_CENTER,
                 autoClose: 1500
             })
-            navigate('/')
+            // navigate('/') // ! remove from comment
         }
 
         EventsManager.instance.on(
