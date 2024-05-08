@@ -30,7 +30,7 @@ export class GameSession implements Game {
     )
       //if COOP
       this.timeLeft = 120
-    else this.timeLeft = 5
+    else this.timeLeft = 150
   }
 
   incrementScore(): void {

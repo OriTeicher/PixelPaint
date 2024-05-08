@@ -9,6 +9,7 @@ import { JoinRoomPayload } from '../payloads/JoinRoomPayload'
 import { Errors } from '../utils/CommonErrors'
 import { Modes } from '../utils/GameConstants'
 import SocketManager from '../services/SocketManager'
+import { color } from 'framer-motion'
 
 interface JoinGameScreenProps {
     setGameMode: Function
@@ -158,7 +159,7 @@ function JoinGameScreen({ setGameMode, setPlayerID }: JoinGameScreenProps) {
                 <MsgModal onClose={handleCloseModal} msg={modalMsg} />
             )}
             <h1>
-                Welcome to <span>Pixel</span>Paint
+                Welcome to <span style={{ color: '#e0b0b0' }}>Pixel</span>Paint
             </h1>
             <section className={`${styles.mainMenuContainer}`}>
                 <div className={`${styles.logoContainer}`}>

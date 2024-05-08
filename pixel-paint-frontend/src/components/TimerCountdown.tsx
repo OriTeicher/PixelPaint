@@ -30,7 +30,7 @@ const TimerCountdown: FC<TimerCountdownProps> = ({
 
     useEffect(() => {
         setTimeout(() => {
-            // if (timeLeft === 0) onTimeOver()
+            if (timeLeft === 0) onTimeOver()
             if (timeLeft === 0) console.log('hello')
             else {
                 if (SocketManager.instance.isHost) {
