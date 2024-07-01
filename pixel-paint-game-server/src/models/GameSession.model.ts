@@ -29,8 +29,8 @@ export class GameSession implements Game {
       gameMode === Modes.CO_OP_PAINT
     )
       //if COOP
-      this.timeLeft = 120
-    else this.timeLeft = 150
+      this.timeLeft = 1200
+    else this.timeLeft = 1500
   }
 
   incrementScore(): void {

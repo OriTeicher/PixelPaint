@@ -20,15 +20,13 @@ body {
 .topBarContainer {
     font-family: 'Madimi One', sans-serif !important;
     color: rgb(216, 216, 216);
+    text-shadow: 1px black;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     font-weight: bold;
-    grid-row: 1;
-    height: 100%;
-    letter-spacing: 1.5px;
 
     div {
         display: flex;
@@ -110,13 +108,13 @@ footer {
         position: absolute;
         top: 0;
         right: 0;
-        margin-inline-end: 5px;
-        font-size: 30px;
         font-family: 'Madimi One', sans-serif !important;
         border-radius: 10px;
         background-color: $logoColor;
         border: 3px solid black;
-        font-weight: 800;
+        margin: 5px;
+        font-size: 20px;
+        font-weight: 900;
         &:hover {
             cursor: pointer;
             background-color: #d7d7d7;
@@ -137,7 +135,6 @@ footer {
     left: 0;
     margin-inline-start: 5px;
     margin-block-start: 5px;
-    padding: 0px 10px;
     width: fit-content;
     border-radius: 10px;
     border: 3px solid black;
@@ -395,11 +392,6 @@ p {
     .tile {
         width: 10px;
     }
-
-    .backBtn {
-        font-size: 30px;
-        font-weight: 900;
-    }
 }
 
 .pictureContainer {
@@ -476,10 +468,8 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 0px;
         font-size: 2rem;
         font-weight: bold;
-        height: 70px;
         letter-spacing: 1.5px;
         div {
             display: flex;
@@ -488,7 +478,7 @@ p {
             font-size: 35px;
         }
         box-shadow: rgb(0 0 0) 0px 2px 8px 0px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
 }
 @media (max-width: 350px) {
@@ -496,11 +486,4 @@ p {
         display: flex;
         flex-direction: column;
     }
-}
-
-.gameBtns button,
-.backBtn {
-    margin: 10px 5px;
-    font-size: 30px;
-    padding: 0px 10px;
 }

@@ -132,7 +132,7 @@ const GameManager: FC<GameManagerProps> = ({
         }
     }, [puzzle])
 
-    const onClearClicked = () => {
+    const handleClearClicked = () => {
         setColoredObjectiveTiles(0)
         setCurrentColored(0)
         setShowPic(true)
@@ -249,7 +249,7 @@ const GameManager: FC<GameManagerProps> = ({
                 gameMode={gameMode}
                 handleBack={handleBackClick}
             />
-            <div className={`gameContainer`}>
+            <div className={`gameContainer mode-${gameMode}`}>
                 <GridLayout
                     rows={rows}
                     columns={columns}
@@ -269,7 +269,7 @@ const GameManager: FC<GameManagerProps> = ({
                     puzzle={puzzle}
                     gameMode={gameMode}
                     onTileClicked={onTileClicked}
-                    onClearClicked={onClearClicked}
+                    onClearClicked={handleClearClicked}
                 />
             </div>
         </div>
